@@ -52,20 +52,20 @@ namespace SzoTanulo
                 _correctAnswers++;
                 if (_correctAnswers >= 2)
                 {
-                    _currentQuestion.Learned = 1; // A szó megtanult státuszának frissítése
+                    _currentQuestion.Learned = 1;
                     using (var context = new AppDbContext())
                     {
                         context.Words.Update(_currentQuestion);
                         context.SaveChanges();
                     }
-                    _correctAnswers = 0; // Reset the correct answers count
+                    _correctAnswers = 0; 
                 }
             }
             else
             {
                 MessageBox.Show($"Hibás válasz! A helyes válasz: {_currentQuestion.Meaning}");
             }
-            StartQuiz(); // Következő kérdés
+            StartQuiz(); 
         }
     }
 }
