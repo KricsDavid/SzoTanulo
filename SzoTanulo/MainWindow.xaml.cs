@@ -45,7 +45,7 @@ namespace SzoTanulo
 
         private void OnAnswerClick(object sender, RoutedEventArgs e)
         {
-            string selectedAnswer = AnswerOptions.SelectedItem as string;
+            string? selectedAnswer = AnswerOptions.SelectedItem as string;
             if (selectedAnswer == _currentQuestion.Meaning)
             {
                 MessageBox.Show("Helyes válasz!");
